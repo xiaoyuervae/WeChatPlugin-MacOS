@@ -410,8 +410,8 @@
     
     MMSessionMgr *sessionMgr = [[objc_getClass("MMServiceCenter") defaultCenter] getService:objc_getClass("MMSessionMgr")];
     WCContactData *msgContact = [sessionMgr getContact:userName];
-    if ([msgContact isBrandContact] || [msgContact isSelf]) {
-        //        该消息为公众号或者本人发送的消息
+    if ([msgContact isSelf]) {
+        //        本人发送的消息
         return;
     }
     NSArray *autoReplyModels = [[TKWeChatPluginConfig sharedConfig] autoReplyModels];
@@ -425,6 +425,12 @@
             }
             return;
         }
+        
+        if ([msgContact isBrandContact] && model.enablePublicReply) {
+            [self replyWithMsg:addMsg model:model];
+            return;
+        }
+        
         if ([addMsg.fromUserName.string containsString:@"@chatroom"] && !model.enableGroupReply) return;
         if (![addMsg.fromUserName.string containsString:@"@chatroom"] && !model.enableSingleReply) return;
         

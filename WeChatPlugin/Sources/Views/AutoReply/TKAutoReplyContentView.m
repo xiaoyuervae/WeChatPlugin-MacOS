@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSTextField *autoReplyLabel;
 @property (nonatomic, strong) NSTextField *autoReplyContentField;
 @property (nonatomic, strong) NSButton *enableGroupReplyBtn;
+@property (nonatomic, strong) NSButton *enablePublicReplyBtn;
 @property (nonatomic, strong) NSButton *enableSingleReplyBtn;
 @property (nonatomic, strong) NSButton *enableRegexBtn;
 @property (nonatomic, strong) NSTextField *delayField;
@@ -65,6 +66,13 @@
         btn;
     });
     
+    self.enablePublicReplyBtn = ({
+        NSButton *btn = [NSButton tk_checkboxWithTitle:TKLocalizedString(@"assistant.autoReply.enablePublic") target:self action:@selector(clickEnablePublicBtn:)];
+        btn.frame = NSMakeRect(20, 75, 400, 20);
+        
+        btn;
+    });
+    
     self.enableSingleReplyBtn = ({
         NSButton *btn = [NSButton tk_checkboxWithTitle:TKLocalizedString(@"assistant.autoReply.enableSingle") target:self action:@selector(clickEnableSingleBtn:)];
         btn.frame = NSMakeRect(200, 50, 400, 20);
@@ -96,7 +104,7 @@
 
     self.autoReplyContentField = ({
         NSTextField *textField = [[NSTextField alloc] init];
-        textField.frame = NSMakeRect(20, 80, 350, 175);
+        textField.frame = NSMakeRect(20, 105, 350, 145);
         textField.placeholderString = TKLocalizedString(@"assistant.autoReply.contentPlaceholder");
         textField.delegate = self;
         
@@ -130,6 +138,7 @@
     
     [self addSubviews:@[self.enableRegexBtn,
                         self.enableGroupReplyBtn,
+                        self.enablePublicReplyBtn,
                         self.enableSingleReplyBtn,
                         self.autoReplyContentField,
                         self.autoReplyLabel,
@@ -161,6 +170,17 @@
 
 - (void)clickEnableGroupBtn:(NSButton *)btn {
     self.model.enableGroupReply = btn.state;
+    if (btn.state) {
+        self.model.enable = YES;
+    } else if(!self.model.enableSingleReply) {
+        self.model.enable = NO;
+    }
+    
+    if (self.endEdit) self.endEdit();
+}
+    
+- (void)clickEnablePublicBtn:(NSButton *)btn {
+    self.model.enablePublicReply = btn.state;
     if (btn.state) {
         self.model.enable = YES;
     } else if(!self.model.enableSingleReply) {

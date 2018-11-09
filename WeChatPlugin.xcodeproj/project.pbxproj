@@ -90,6 +90,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D07DE8E2195B0FF00AA3FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TKAboutWindowController.xib; sourceTree = "<group>"; };
+		0D07DE8F2195B0FF00AA3FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TKRemoteControlWindowController.xib; sourceTree = "<group>"; };
 		13B308B4A92CE38341762A48 /* Pods-WeChatPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeChatPlugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeChatPlugin/Pods-WeChatPlugin.release.xcconfig"; sourceTree = "<group>"; };
 		17F7A08DC0E3A0626801414D /* libPods-WeChatPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeChatPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		520AE6E6208E1DA300BADE47 /* TKMessageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMessageManager.h; sourceTree = "<group>"; };
@@ -103,7 +105,6 @@
 		520F2008205E1DF900A36B1E /* TKWebServerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKWebServerManager.m; sourceTree = "<group>"; };
 		52176DD7209809CE0035FA50 /* NSString+Action.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Action.h"; sourceTree = "<group>"; };
 		52176DD8209809CE0035FA50 /* NSString+Action.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Action.m"; sourceTree = "<group>"; };
-		521C49C420820662003902E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TKRemoteControlWindowController.xib; sourceTree = "<group>"; };
 		521C49C620820663003902E7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/TKRemoteControlWindowController.xib"; sourceTree = "<group>"; };
 		521D75FA2080E3670093C820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		521D75FC2080E3780093C820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -163,7 +164,6 @@
 		52CD4C7B209ED2300061A5D6 /* TKAutoReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAutoReplyCell.m; sourceTree = "<group>"; };
 		52CD4C80209ED23B0061A5D6 /* TKRemoteControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKRemoteControlCell.m; sourceTree = "<group>"; };
 		52CD4C81209ED23B0061A5D6 /* TKRemoteControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRemoteControlCell.h; sourceTree = "<group>"; };
-		52CD4C8520A01CDC0061A5D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TKAboutWindowController.xib; sourceTree = "<group>"; };
 		52CD4C8720A01CE40061A5D6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/TKAboutWindowController.xib"; sourceTree = "<group>"; };
 		52CD4C8820A07B8E0061A5D6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/TKAboutWindowController.xib"; sourceTree = "<group>"; };
 		52CD4C8920A07B8E0061A5D6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/TKRemoteControlWindowController.xib"; sourceTree = "<group>"; };
@@ -540,7 +540,6 @@
 				528B4F8F1EA7383800BC6A89 /* Headers */,
 				528B4F901EA7383800BC6A89 /* Resources */,
 				528B4FB51EA738B100BC6A89 /* ShellScript */,
-				165746E0A28B760DEA538E0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -574,6 +573,7 @@
 				en,
 				"zh-Hans",
 				"zh-Hant",
+				Base,
 			);
 			mainGroup = 528B4F881EA7383800BC6A89;
 			productRefGroup = 528B4F931EA7383800BC6A89 /* Products */;
@@ -604,21 +604,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		165746E0A28B760DEA538E0D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeChatPlugin/Pods-WeChatPlugin-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		528B4FB51EA738B100BC6A89 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,7 +615,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\napp_name=\"WeChat\"\nframework_name=\"WeChatPlugin\"\napp_bundle_path=\"/Applications/${app_name}.app/Contents/MacOS\"\napp_executable_path=\"${app_bundle_path}/${app_name}\"\napp_executable_backup_path=\"${app_executable_path}_backup\"\nframework_path=\"${app_bundle_path}/${framework_name}.framework\"\n# 备份WeChat原始可执行文件\nif [ ! -f \"$app_executable_backup_path\" ]\nthen\ncp \"$app_executable_path\" \"$app_executable_backup_path\"\nfi\n\nrm -rf \"./Other/Products/Debug/${framework_name}.framework\"\ncp -r \"${BUILT_PRODUCTS_DIR}/${framework_name}.framework\" \"./Other/Products/Debug/${framework_name}.framework\"\ncp -r \"${BUILT_PRODUCTS_DIR}/${framework_name}.framework\" ${app_bundle_path}\n./Other/insert_dylib --all-yes \"${framework_path}/${framework_name}\" \"$app_executable_backup_path\" \"$app_executable_path\"";
+			shellScript = "#!/bin/bash\napp_name=\"WeChat\"\nframework_name=\"WeChatPlugin\"\napp_bundle_path=\"/Applications/${app_name}.app/Contents/MacOS\"\napp_executable_path=\"${app_bundle_path}/${app_name}\"\napp_executable_backup_path=\"${app_executable_path}_backup\"\nframework_path=\"${app_bundle_path}/${framework_name}.framework\"\n# 备份WeChat原始可执行文件\nif [ ! -f \"$app_executable_backup_path\" ]\nthen\ncp \"$app_executable_path\" \"$app_executable_backup_path\"\nfi\n\nrm -rf \"./Other/Products/Debug/${framework_name}.framework\"\ncp -r \"${BUILT_PRODUCTS_DIR}/${framework_name}.framework\" \"./Other/Products/Debug/${framework_name}.framework\"\ncp -r \"${BUILT_PRODUCTS_DIR}/${framework_name}.framework\" ${app_bundle_path}\n./Other/insert_dylib --all-yes \"${framework_path}/${framework_name}\" \"$app_executable_backup_path\" \"$app_executable_path\"\n";
 		};
 		A23204925F0A37A0EBE14B92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -647,7 +632,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -700,9 +685,9 @@
 		521C49C520820662003902E7 /* TKRemoteControlWindowController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				521C49C420820662003902E7 /* en */,
 				521C49C620820663003902E7 /* zh-Hans */,
 				52CD4C8920A07B8E0061A5D6 /* zh-Hant */,
+				0D07DE8F2195B0FF00AA3FF4 /* Base */,
 			);
 			name = TKRemoteControlWindowController.xib;
 			sourceTree = "<group>";
@@ -720,9 +705,9 @@
 		52CD4C8620A01CDC0061A5D6 /* TKAboutWindowController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				52CD4C8520A01CDC0061A5D6 /* en */,
 				52CD4C8720A01CE40061A5D6 /* zh-Hans */,
 				52CD4C8820A07B8E0061A5D6 /* zh-Hant */,
+				0D07DE8E2195B0FF00AA3FF4 /* Base */,
 			);
 			name = TKAboutWindowController.xib;
 			sourceTree = "<group>";

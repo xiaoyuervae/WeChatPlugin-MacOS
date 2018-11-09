@@ -91,6 +91,7 @@
 "assistant.autoReply.selectSpecific" = "View Or Edit Session";
 "assistant.autoReply.enableRegEx" = "Enable RegEx";
 "assistant.autoReply.enableGroup" = "Enable Group Reply";
+"assistant.autoReply.enableGroup" = "Enable Public Reply";
 "assistant.autoReply.enableSingle" = "Enable Single Reply";
 "assistant.autoReply.delay" = "Delay Send";
 "assistant.autoReply.timeUnit" = "Second";
