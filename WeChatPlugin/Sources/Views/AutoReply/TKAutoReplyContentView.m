@@ -152,6 +152,7 @@
 
 - (void)clickEnableSpecificReplyBtn:(NSButton *)btn {
     self.selectSessionButton.hidden = !btn.state;
+    self.enablePublicReplyBtn.hidden = btn.state;
     self.enableGroupReplyBtn.hidden = btn.state;
     self.enableSingleReplyBtn.hidden = btn.state;
     if (btn.state) {
@@ -172,7 +173,7 @@
     self.model.enableGroupReply = btn.state;
     if (btn.state) {
         self.model.enable = YES;
-    } else if(!self.model.enableSingleReply) {
+    } else if(!self.model.enableSingleReply && !self.model.enablePublicReply) {
         self.model.enable = NO;
     }
     
@@ -183,7 +184,7 @@
     self.model.enablePublicReply = btn.state;
     if (btn.state) {
         self.model.enable = YES;
-    } else if(!self.model.enableSingleReply) {
+    } else if(!self.model.enableSingleReply && !self.model.enableGroupReply) {
         self.model.enable = NO;
     }
     
@@ -194,7 +195,7 @@
     self.model.enableSingleReply = btn.state;
     if (btn.state) {
         self.model.enable = YES;
-    } else if(!self.model.enableGroupReply) {
+    } else if(!self.model.enableGroupReply && !self.model.enablePublicReply) {
         self.model.enable = NO;
     }
     if (self.endEdit) self.endEdit();
@@ -220,6 +221,7 @@
     self.autoReplyContentField.stringValue = model.replyContent != nil ? model.replyContent : @"";
     self.enableGroupReplyBtn.state = model.enableGroupReply;
     self.enableSingleReplyBtn.state = model.enableSingleReply;
+    self.enablePublicReplyBtn.state = model.enablePublicReply;
     self.enableRegexBtn.state = model.enableRegex;
     self.enableDelayBtn.state = model.enableDelay;
     self.delayField.stringValue = [NSString stringWithFormat:@"%ld",model.delayTime];
@@ -228,6 +230,7 @@
     self.selectSessionButton.hidden = !model.enableSpecificReply;
     self.enableGroupReplyBtn.hidden = model.enableSpecificReply;
     self.enableSingleReplyBtn.hidden = model.enableSpecificReply;
+    self.enablePublicReplyBtn.hidden = model.enableSpecificReply;
 }
 
 - (void)selectSessionAction {
