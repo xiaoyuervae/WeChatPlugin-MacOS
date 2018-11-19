@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D088B90219FBAE600D0CE8B /* FormulaStringCalcUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D088B8F219FBAE600D0CE8B /* FormulaStringCalcUtility.h */; };
+		0D088B92219FBB0F00D0CE8B /* FormulaStringCalcUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D088B91219FBB0F00D0CE8B /* FormulaStringCalcUtility.m */; };
 		520AE6E8208E1DA300BADE47 /* TKMessageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 520AE6E6208E1DA300BADE47 /* TKMessageManager.h */; };
 		520AE6E9208E1DA300BADE47 /* TKMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 520AE6E7208E1DA300BADE47 /* TKMessageManager.m */; };
 		520AE6F0208E231F00BADE47 /* NotifyConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 520AE6EF208E231F00BADE47 /* NotifyConstant.h */; };
@@ -92,6 +94,8 @@
 /* Begin PBXFileReference section */
 		0D07DE8E2195B0FF00AA3FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TKAboutWindowController.xib; sourceTree = "<group>"; };
 		0D07DE8F2195B0FF00AA3FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TKRemoteControlWindowController.xib; sourceTree = "<group>"; };
+		0D088B8F219FBAE600D0CE8B /* FormulaStringCalcUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormulaStringCalcUtility.h; sourceTree = "<group>"; };
+		0D088B91219FBB0F00D0CE8B /* FormulaStringCalcUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormulaStringCalcUtility.m; sourceTree = "<group>"; };
 		13B308B4A92CE38341762A48 /* Pods-WeChatPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeChatPlugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeChatPlugin/Pods-WeChatPlugin.release.xcconfig"; sourceTree = "<group>"; };
 		17F7A08DC0E3A0626801414D /* libPods-WeChatPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeChatPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		520AE6E6208E1DA300BADE47 /* TKMessageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMessageManager.h; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				52B5CF031F3B4631000D9DD9 /* TKHelper.m */,
 				52B5CF041F3B4631000D9DD9 /* XMLReader.h */,
 				52B5CF051F3B4631000D9DD9 /* XMLReader.m */,
+				0D088B8F219FBAE600D0CE8B /* FormulaStringCalcUtility.h */,
+				0D088B91219FBB0F00D0CE8B /* FormulaStringCalcUtility.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				52CD4C9720A0885A0061A5D6 /* MMChatsTableCellView+hook.h in Headers */,
 				52DA3E0D2094790900C618BB /* TKDownloadWindowController.h in Headers */,
 				52475C321F6BA43800760E3E /* TKIgnoreSessonModel.h in Headers */,
+				0D088B90219FBAE600D0CE8B /* FormulaStringCalcUtility.h in Headers */,
 				52206B6A20836A230010C232 /* NSMenu+Action.h in Headers */,
 				52B5CF181F3B4631000D9DD9 /* TKRemoteControlModel.h in Headers */,
 				52CD4C7D209ED2300061A5D6 /* TKAutoReplyContentView.h in Headers */,
@@ -673,6 +680,7 @@
 				52CD4C59209C5CA10061A5D6 /* NSWindowController+Action.m in Sources */,
 				52CD4C82209ED23B0061A5D6 /* TKRemoteControlCell.m in Sources */,
 				528B4FB41EA7386D00BC6A89 /* main.mm in Sources */,
+				0D088B92219FBB0F00D0CE8B /* FormulaStringCalcUtility.m in Sources */,
 				52CD4C9A20A0885A0061A5D6 /* MMStickerMessageCellView+hook.m in Sources */,
 				52B5CF1D1F3B4631000D9DD9 /* XMLReader.m in Sources */,
 				52475C331F6BA43800760E3E /* TKIgnoreSessonModel.m in Sources */,
