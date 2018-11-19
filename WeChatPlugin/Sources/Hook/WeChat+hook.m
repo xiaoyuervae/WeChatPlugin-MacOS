@@ -495,10 +495,14 @@
         NSString *question = [realQuestionArr objectAtIndex:0];
         
         // 替换中文相关字符
-        question = [question stringByReplacingOccurrencesOfString:@"加" withString:@"+"];
-        question = [question stringByReplacingOccurrencesOfString:@"减" withString:@"-"];
+        
         question = [question stringByReplacingOccurrencesOfString:@"乘以" withString:@"*"];
         question = [question stringByReplacingOccurrencesOfString:@"除以" withString:@"/"];
+        question = [question stringByReplacingOccurrencesOfString:@"减去" withString:@"-"];
+        question = [question stringByReplacingOccurrencesOfString:@"加上" withString:@"+"];
+        question = [question stringByReplacingOccurrencesOfString:@"乘" withString:@"*"];
+        question = [question stringByReplacingOccurrencesOfString:@"除" withString:@"/"];
+        question = [question stringByReplacingOccurrencesOfString:@"加" withString:@"+"];
         question = [question stringByReplacingOccurrencesOfString:@"减" withString:@"-"];
         
         NSString *result = [FormulaStringCalcUtility calcComplexFormulaString:question];
